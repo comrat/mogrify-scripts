@@ -1,10 +1,48 @@
 #! /bin/bash
 
-if [[ $# < 1 ]]; then
-	echo "Provide at least one parameter: output file"
-	exit 2
-fi
+input="./"
+FRAME_COUNT="10"
+WIDTH="100"
+HEIGHT="100"
+OUTPUT_FILE="output.png"
 
-OUTPUT_FILE=$1
+POSITIONAL=()
+while [[ $# -gt 0 ]]
+do
+key="$1"
 
-montage *.png -tile 10x1 -geometry 100x100+0+0 $OUTPUT_FILE
+case $key in
+    -f|--frame-count)
+    FRAME_COUNT="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -w|--width)
+    WIDTH="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -h|--height)
+    HEIGHT="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -i|--input)
+    INPUT="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -o|--output)
+    OUTPUT_FILE="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    *)    # unknown option
+    POSITIONAL+=("$1") # save it in an array for later
+    shift # past argument
+    ;;
+esac
+done
+set -- "${POSITIONAL[@]}" # restore positional parameters
+
+montage "$INPUT*.png" -tile $FRAME_COUNTx1 -geometry $WIDTHx$HEIGHT+0+0 $OUTPUT_FILE
