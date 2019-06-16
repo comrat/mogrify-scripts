@@ -9,3 +9,6 @@ Change color in `input.png` image and replace it in `output.png` image to anothe
 
 ## make_sprite.sh
 Create single psrite image (place all images in row)
+
+## crop_size.sh*
+Resize and crop image
