@@ -12,3 +12,6 @@ Create single psrite image (place all images in row)
 
 ## crop_size.sh*
 Resize and crop image
+
+## make_gif.sh*
+Make single GIF animation file from all PNG files in -i directory
