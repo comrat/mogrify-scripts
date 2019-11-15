@@ -24,3 +24,9 @@ Make single GIF animation file from all PNG files in -i directory
 
 ## change_format.sh*
 Change image format script
+
+## resize.sh*
+Resize image script
+
+## resize_dir.sh*
+Resize all images in directory script
