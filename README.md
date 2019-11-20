@@ -23,10 +23,19 @@ Resize and crop image
 Make single GIF animation file from all PNG files in -i directory
 
 ## change_format.sh*
-Change image format script
+Change image format script. Usage example:
+```
+./change_format.sh -i input.jpg -o png
+```
 
 ## resize.sh*
-Resize image script
+Resize image script. Usage example:
+```
+./resize.sh -i input.jpg -w 100 -h 200 -o resized.jpg
+```
 
 ## resize_dir.sh*
-Resize all images in directory script
+Resize all images in directory script. Usage example:
+```
+./resize.sh -i ./ -w 100 -h 200 -o ./output
+```
