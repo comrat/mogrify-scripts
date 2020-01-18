@@ -3,11 +3,11 @@
 POSITIONAL=()
 WIDTH=720
 HEIGHT=480
+OUTPUT_DIR="output"
+
 while [[ $# -gt 0 ]]
 do
     key="$1"
-    OUTPUT_DIR="output"
-
     case $key in
         -i|--input)
         INPUT_DIR="$2"
