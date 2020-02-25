@@ -39,3 +39,9 @@ Resize all images in directory script. Usage example:
 ```
 ./resize.sh -i ./ -w 100 -h 200 -o ./output
 ```
+
+## make_pdf.sh
+Create PDF from input files:
+```
+./make_pdf.sh -i *.png -o output.pdf
+```
