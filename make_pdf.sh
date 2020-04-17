@@ -27,5 +27,5 @@ esac
 done
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-convert $INPUT_FILES 0003.jpg $OUTPUT_PDF
+convert $INPUT_FILES $OUTPUT_PDF
 
