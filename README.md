@@ -45,3 +45,15 @@ Create PDF from input files:
 ```
 ./make_pdf.sh -i *.png -o output.pdf
 ```
+
+## remove_alpha.sh
+Remove alpha channel from RGBA image
+```
+./remove_alpha.sh -i input.png -o output.png
+```
+
+## remove_alpha_dir.sh
+Remove alpha channel from all RGBA images in directory
+```
+./remove_alpha_dir.sh -i ./input -o ./output
+```
