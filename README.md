@@ -21,6 +21,9 @@ Resize and crop image
 
 ## make_gif.sh
 Make single GIF animation file from all PNG files in -i directory
+```
+./make_gif.sh -i input.mp4 -o output.mp4
+```
 
 ## change_format.sh
 Change image format script. Usage example:
