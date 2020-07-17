@@ -14,7 +14,10 @@ Change color in directory images and replace it in `output.png` image to another
 ```
 
 ## make_sprite.sh
-Create single psrite image (place all images in row)
+Create single sprite image `-o` from `-f` frames from png images in `-i` input directory. Each frame is `-w`x`-h` size
+```
+./make_sprite.sh -f 30 -w 100 -h 100 -i ./input_dir -o output_sprite.png
+```
 
 ## crop_size.sh
 Resize and crop image

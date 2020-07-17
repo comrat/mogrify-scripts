@@ -45,4 +45,4 @@ esac
 done
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-montage "$INPUT*.png" -tile $FRAME_COUNTx1 -geometry $WIDTHx$HEIGHT+0+0 $OUTPUT_FILE
+montage "$INPUT/*.png" -tile $FRAME_COUNTx1 -geometry $WIDTHx$HEIGHT+0+0 $OUTPUT_FILE
