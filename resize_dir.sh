@@ -40,5 +40,5 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 for i in $INPUT_DIR/*;
     do name=`echo $i | cut -d'.' -f1`;
         FILENAME=$(basename "$i")
-        convert $FILENAME -resize "$WIDTHxHEIGHT" "$OUTPUT_DIR/$FILENAME"
+        convert $FILENAME -resize "$WIDTHx$HEIGHT" "$OUTPUT_DIR/$FILENAME"
     done
