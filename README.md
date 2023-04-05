@@ -26,9 +26,9 @@ Resize and crop image
 ```
 
 ## make_gif.sh
-Make single GIF animation file from all PNG files in -i directory
+Make single GIF animation file from all image files in -i directory. Image file format can specified with the `-f` flag, and time delay between each frame with the `-t` flag
 ```
-./make_gif.sh -i input.mp4 -o output.mp4
+./make_gif.sh -i ./input_dir -f png -t 25 -o output.gif
 ```
 
 ## change_format.sh
