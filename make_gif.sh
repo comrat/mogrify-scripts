@@ -1,7 +1,9 @@
 #! /bin/bash
 
 INPUT_DIR="."
+FORMAT="jpg"
 OUTPUT_FILE="output.gif"
+TIME=30
 
 POSITIONAL=()
 while [[ $# -gt 0 ]]
@@ -11,6 +13,16 @@ key="$1"
 case $key in
     -i|--input)
     INPUT_DIR="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -f|--format)
+    FORMAT="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -t|--time)
+    TIME="$2"
     shift # past argument
     shift # past value
     ;;
@@ -27,4 +39,4 @@ esac
 done
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-convert $INPUT_DIR/*.png $OUTPUT_FILE
+convert -delay $TIME $INPUT_DIR/*.$FORMAT $OUTPUT_FILE
