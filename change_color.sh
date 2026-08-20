@@ -1,6 +1,5 @@
 #! /bin/bash
 
-INPUT_FILE="input.png"
 INPUT_COLOR="transparent"
 OUTPUT_FILE="output.png"
 OUTPUT_COLOR="transparent"
@@ -38,5 +37,10 @@ case $key in
 esac
 done
 set -- "${POSITIONAL[@]}" # restore positional parameters
+
+if [ -z ${INPUT_FILE+x} ]; then
+	echo "Provide the input file using the -i flag"
+	exit 2
+fi
 
 convert $INPUT_FILE -$OUTPUT_COLOR $INPUT_COLOR $OUTPUT_FILE

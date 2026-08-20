@@ -2,9 +2,14 @@
 Image processing script collection
 
 ## change_color.sh
-Change color in `input.png` image and replace it in `output.png` image to another. Example: change 'red' color in `input.png` to 'transparent' and save result in `output.png`
+Change color to anither one in the input image and replace it in `output.png` image to another. Example: change 'red' color in `input.png` to 'transparent' and save result in `output.png`
+
+* `-i|--input` - the input image file (required)
+* `-o|--output` - the output image file defaults to `./output.png` (optional)
+* `-f|--from-color` - color to change, defaults is `transarent` (optional)
+* `-t|--to-color` - desired result color, defaults is `transarent` (optional)
 ```
-./change_background.sh -f red -t transparent
+./change_color.sh -i input.png -f red -t transparent
 ```
 
 ## change_color_dir.sh
