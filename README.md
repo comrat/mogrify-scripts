@@ -2,7 +2,7 @@
 Image processing script collection
 
 ## change_color.sh
-Change color to anither one in the input image and replace it in `output.png` image to another. Example: change 'red' color in `input.png` to 'transparent' and save result in `output.png`
+Replaces a color in the input image with another color and saves the result to an output file.
 
 * `-i|--input` - the input image file (required)
 * `-o|--output` - the output image file defaults to `./output.png` (optional)
@@ -13,9 +13,14 @@ Change color to anither one in the input image and replace it in `output.png` im
 ```
 
 ## change_color_dir.sh
-Change color in directory images and replace it in `output.png` image to another. Example: change 'red' color in `input.png` to 'transparent' and save result in `output.png`
+Replaces a color in the input directory images with another color and saves the result to an output directory.
+
+* `-i|--input` - the input directory (required)
+* `-o|--output` - the output directory defaults to `./output` (optional)
+* `-f|--from-color` - color to change, defaults is `transarent` (optional)
+* `-t|--to-color` - desired result color, defaults is `transarent` (optional)
 ```
-./change_color_dir.sh -i ./ -f red -t transparent
+./change_color_dir.sh -i ./ -o ./output -f red -t transparent
 ```
 
 ## make_sprite.sh
