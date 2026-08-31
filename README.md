@@ -23,6 +23,17 @@ Replaces a color in the input directory images with another color and saves the 
 ./change_color_dir.sh -i ./ -o ./output -f red -t transparent
 ```
 
+## pdf2img_dir.sh
+Convert all PDF pages to the separate image files
+
+* `-i|--input` - the input pdf file (required)
+* `-o|--output` - the output directory defaults to `./` (optional)
+* `-f|--format` - image output format defaults to `jpg` (optional)
+* `-d|--density` - points density defaults to `150` (optional)
+```
+./change_color_dir.sh -i ./ -o ./output -f red -t transparent
+```
+
 ## make_sprite.sh
 Create single sprite image `-o` from `-f` frames from png images in `-i` input directory. Each frame is `-w`x`-h` size
 ```
